@@ -1,15 +1,13 @@
 let yes = document.getElementById('yes');
 let no = document.getElementById('no');
 let btn = document.getElementById('btn');
-// let card = document.querySelector('.card');
+let card = document.querySelector('.card');
 
 let style = getComputedStyle(document.body);
 
 btn.addEventListener('click', (e) => {
     e.preventDefault();
-    let n = Math.random();
-    console.log(n);
-    _(n > 0.7 ? 'yes' : 'no').animate();
+    _(Math.random() > 0.7 ? 'yes' : 'no').animate();
 });
 
 
@@ -36,18 +34,17 @@ _.prototype.fade = async function fade(type, ms) {
         gap = interval / duration,
         self = this,
         bg = self.el.id == 'yes' ? 'bg-success' : 'bg-danger',
-        color = self.el.id == 'yes' ? 'text-success' : 'text-danger';
-
+        color = self.el.id == 'yes' ? 'color-success' : 'color-danger';
     if (isIn) {
         self.el.style.display = 'block';
         self.el.style.opacity = opacity;
 
         document.body.classList.replace('bg-dark', bg);
-        // card.classList.replace('text-light', color);
+        card.classList.replace('text-light', color);
 
     } else {
         document.body.classList.replace(bg, 'bg-dark');
-        // card.classList.replace(color, 'text-light');
+        card.classList.replace(color, 'text-light');
     }
 
     function func() {

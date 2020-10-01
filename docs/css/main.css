@@ -1,3 +1,11 @@
 body {
     transition: background-color ease-in-out 500ms;
 }
+
+.color-success {
+    color: #0d462c;
+}
+
+.color-danger {
+    color: #721c24;
+}
