@@ -12,6 +12,7 @@ const lrServer = livereload.createServer({
 const PORT = 5000;
 const publicPath = path.join(__dirname, '../public');
 const sassFolder = path.join(__dirname, '../sass');
+const indexPath = path.join(__dirname, '../index.html');
 
 /* Middleware */
 server.use(
@@ -20,12 +21,13 @@ server.use(
         dest: path.join(publicPath, '/css'),
         debug: true,
         outputStyle: 'expanded',
-        prefix: '/css'
+        prefix: '/public/css'
     })
 );
 
 server.use(connectLivereload());
 server.use(express.static(publicPath));
-lrServer.watch([publicPath, sassFolder]);
+lrServer.watch([publicPath, sassFolder, indexPath]);
 
-server.listen(PORT, () => console.log(`Server up on port ${PORT}.`));
+server.get('/', (req, res) => res.sendFile(indexPath))
+    .listen(PORT, () => console.log(`Server up on port ${PORT}.`));

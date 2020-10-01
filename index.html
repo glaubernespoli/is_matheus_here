@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Is Matheus Here?</title>
 
-		<!-- Bootstrap 5! -->
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-		/>
-		<link rel="stylesheet" href="public/css/main.css" />
-	</head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is Matheus Here?</title>
 
-	<body>
-		<script src="public/js/main.js"></script>
-	</body>
+    <!-- Bootstrap 5! -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/main.css" />
+</head>
+
+<body class="bg-dark">
+    <div class="container-sm mt-5">
+        <div class="row">
+            <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <h1>Is Matheus Here?</h1>
+                    <button id="btn" type="button" class="btn btn-dark">Check</button>
+
+                    <div id="message">
+                        <div id="no" class="mt-5 alert alert-danger" style="display: none;" role="alert">
+                            <h4 class="alert-heading">Oh damn...</h4>
+                            It seems that <strong>no</strong>, Matheus is currently not present in the class.
+                        </div>
+
+                        <div id="yes" class="mt-5 alert alert-success" style="display: none;" role="alert">
+                            <h4 class="alert-heading">Wow! Is that an unicorn?</h4>
+                            Miraculously, it appears that <strong>yes</strong>, Matheus is currently present in the
+                            class!! Shall we celebrate?
+                        </div>
+                    </div>
+
+                    <!-- <div class="alert mt-5 fade show hide" role="alert"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+        integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
+    </script>
+    <script src="public/js/main.js"></script>
+</body>
+
 </html>
