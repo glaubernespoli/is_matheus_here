@@ -1,5 +1,9 @@
 body {
-    transition: background-color ease-in-out 500ms;
+    transition: background-color ease-in-out .5s;
+}
+
+.card {
+    transition: color ease-in-out .2s;
 }
 
 .color-success {
