@@ -23,7 +23,7 @@ function _(el) {
 _.prototype.animate = async function animate() {
     btn.classList.add('disabled');
     this.fade('in', 500);
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise(resolve => setTimeout(resolve, 5000));
     this.fade('out', 500);
     btn.classList.remove('disabled');
 }
